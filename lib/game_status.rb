@@ -16,5 +16,22 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  board.each do |combination|
+    combination.each do |win|
+      winnerX = 0
+      winnerO = 0
+      count = 0
+      while count < 3
+        if(win == "X")
+          winnerX += 1
+        elsif(win == "O")
+          winnerO += 1
+        end
+        count += 1
+      end
 
+      if winnerX == 3|| winnerO == 3
+        return combination.inspect
+      end
+  end
 end
