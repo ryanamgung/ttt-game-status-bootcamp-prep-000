@@ -25,16 +25,10 @@ def won?(board)
 end
 
 def full?(board)
-  count = 0
   board.each do |filled|
-    if(position_taken?(board, filled))
-      count += 1
+    if(!position_taken?(board, filled))
+      return false
     end
   end
-
-  if count == 9
-    return true
-  end
-
-  return false
+  return true
 end
