@@ -25,12 +25,9 @@ def won?(board)
 end
 
 def full?(board)
-  WIN_COMBINATIONS.each do |row|
-    row.each do |element|
-      if(!position_taken?(board, filled))
-        return false
-      end
+  board.all do |fill|
+    if(!position_taken(board, index))
+      return false
     end
-  end
-  return true
+    return true
 end
