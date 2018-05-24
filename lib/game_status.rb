@@ -33,5 +33,7 @@ def won?(board)
       if winnerX == 3|| winnerO == 3
         return combination.inspect
       end
+
+      return nil
   end
 end
