@@ -16,24 +16,10 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  board.each do |combination|
-    combination.each do |win|
-      winnerX = 0
-      winnerO = 0
-      count = 0
-      while count < 3
-        if(win == "X")
-          winnerX += 1
-        elsif(win == "O")
-          winnerO += 1
-        end
-        count += 1
-      end
-
-      if winnerX == 3|| winnerO == 3
-        return combination.inspect
-      end
-
-      return nil
+  WIN_COMBINATIONS.select do |row|
+    if position_taken?(board, row[0]) && board[row[0]] == board[row[1]] && board[row[0]] == board[row[2]]
+      return row
+    end
   end
+  return false
 end
