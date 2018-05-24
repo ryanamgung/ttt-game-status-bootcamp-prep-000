@@ -25,7 +25,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all do |fill|
+  board.all? do |fill|
     if(!position_taken(board, fill))
       return false
     end
