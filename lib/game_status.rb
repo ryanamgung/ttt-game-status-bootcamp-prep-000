@@ -16,9 +16,9 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.select do |row|
-    if position_taken?(board, row[0]) && board[row[0]] == board[row[1]] && board[row[0]] == board[row[2]]
-      return row
+  WIN_COMBINATIONS.select do |win|
+    if position_taken?(board, win[0]) && board[win[0]] == board[win[1]] && board[win[0]] == board[win[2]]
+      return win
     end
   end
   return false
