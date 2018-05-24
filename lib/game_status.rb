@@ -26,7 +26,7 @@ end
 
 def full?(board)
   board.all do |fill|
-    if(!position_taken(board, index))
+    if(!position_taken(board, fill))
       return false
     end
     return true
