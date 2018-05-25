@@ -27,3 +27,9 @@ end
 def full?(board)
   board.all?{|fill| (fill == "X" || fill == "O")}
 end
+
+def draw?(board)
+  if full?(board) && !(won?(board))
+    return true
+  return false
+end
