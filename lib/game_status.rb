@@ -25,7 +25,5 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |fill|
-    if(fill == "X" || fill == "O")
-    end
+  board.all?{|fill| (fill == "X" || fill == "O")}
 end
