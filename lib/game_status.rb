@@ -43,9 +43,9 @@ end
 
 def winner(board)
   if won?(board)
-    if won?(board)[0] == "X"
+    if board[won?(board)[0]] == "X"
       return "X"
-    elsif won?(board)[0] == "O"
+    elsif board[won?(board)[0]] == "O"
       return "O"
     end
   end
