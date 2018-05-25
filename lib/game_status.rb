@@ -27,7 +27,5 @@ end
 def full?(board)
   board.all? do |fill|
     if(fill == "X" || fill == "O")
-      return false
     end
-    return true
 end
